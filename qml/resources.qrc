@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Main.qml</file>
+        <file>components/TopBarMenu.qml</file>
+        <file>components/TopBarMenuItem.qml</file>
+        <file>components/MediaPool.qml</file>
+        <file>components/Viewer.qml</file>
+        <file>components/Timeline.qml</file>
+    </qresource>
+</RCC>

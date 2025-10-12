@@ -1,0 +1,6 @@
+/home/ateebx/qtapp/build/CMakeFiles/qt_app.dir
+/home/ateebx/qtapp/build/CMakeFiles/qt_app_qmlimportscan.dir
+/home/ateebx/qtapp/build/CMakeFiles/edit_cache.dir
+/home/ateebx/qtapp/build/CMakeFiles/rebuild_cache.dir
+/home/ateebx/qtapp/build/CMakeFiles/qt_app_autogen_timestamp_deps.dir
+/home/ateebx/qtapp/build/CMakeFiles/qt_app_autogen.dir

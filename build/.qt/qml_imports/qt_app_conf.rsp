@@ -1,0 +1,14 @@
+-rootPath
+/home/ateebx/qtapp
+-cmake-output
+-output-file
+/home/ateebx/qtapp/build/.qt/qml_imports/qt_app_conf.cmake
+-importPath
+/home/ateebx/qtapp/build/QtApp
+-importPath
+/home/ateebx/qtapp/build
+-importPath
+/usr/lib/qt6/qml
+-qrcFiles
+/home/ateebx/qtapp/build/.qt/rcc/qmake_QtApp.qrc
+/home/ateebx/qtapp/build/.qt/rcc/qt_app_raw_qml_0.qrc

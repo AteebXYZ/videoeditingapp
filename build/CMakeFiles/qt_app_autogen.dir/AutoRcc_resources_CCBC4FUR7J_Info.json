@@ -1,0 +1,30 @@
+{
+	"BUILD_DIR" : "/home/ateebx/qtapp/build/qt_app_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ateebx/qtapp/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ateebx/qtapp/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ateebx/qtapp",
+	"CMAKE_SOURCE_DIR" : "/home/ateebx/qtapp",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/ateebx/qtapp/build/qt_app_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/ateebx/qtapp/qml/Main.qml",
+		"/home/ateebx/qtapp/qml/components/Viewer.qml",
+		"/home/ateebx/qtapp/qml/components/Timeline.qml",
+		"/home/ateebx/qtapp/qml/components/MediaPool.qml",
+		"/home/ateebx/qtapp/qml/components/TopBarMenu.qml",
+		"/home/ateebx/qtapp/qml/components/TopBarMenuItem.qml"
+	],
+	"LOCK_FILE" : "/home/ateebx/qtapp/build/CMakeFiles/qt_app_autogen.dir/AutoRcc_resources_CCBC4FUR7J_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "CCBC4FUR7J",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/ateebx/qtapp/build/CMakeFiles/qt_app_autogen.dir/AutoRcc_resources_CCBC4FUR7J_Used.txt",
+	"SOURCE" : "/home/ateebx/qtapp/qml/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
