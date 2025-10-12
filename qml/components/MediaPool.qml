@@ -14,11 +14,28 @@ Rectangle {
     SplitView.minimumHeight: 100
     color: bgColor
 
-    Text {
-        anchors.centerIn: parent
-        text: "Media Pool"
-        color: "#ccc"
-        font.pixelSize: 20
+    GridView {
+        anchors.fill: parent
+        anchors.margins: 10
+        cellWidth: 110
+        cellHeight: 70
+        // spacing: 10
+        model: 10
+        clip: true
+
+        delegate: Rectangle {
+            width: 100
+            height: 60
+            color: "#555"
+
+            Text {
+                anchors.centerIn: parent
+                color: "white"
+                text: "Clip " + (index + 1)
+            }
+
+        }
+
     }
 
     // --- FileDialog for importing clips ---
