@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/QtApp">
-    <file alias="qmldir">/home/ateebx/qtapp/build/QtApp/qmldir</file>
-  </qresource>
-</RCC>
-

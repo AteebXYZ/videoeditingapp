@@ -55,9 +55,6 @@ ApplicationWindow {
         TopBarMenu {
             animated: menuAnimationsEnabled
             titleText: "File"
-            Component.onCompleted: {
-                console.log("Menu items count:", root.count);
-            }
 
             TopBarMenuItem {
                 text: "New"

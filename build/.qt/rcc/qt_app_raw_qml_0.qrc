@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="/QtApp/">
-    <file alias="qml/Main.qml">/home/ateebx/qtapp/qml/Main.qml</file>
-    <file alias="qml/components/Menu.qml">/home/ateebx/qtapp/qml/components/Menu.qml</file>
-    <file alias="qml/components/MenuItem.qml">/home/ateebx/qtapp/qml/components/MenuItem.qml</file>
-  </qresource>
-</RCC>
-

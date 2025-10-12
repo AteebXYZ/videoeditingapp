@@ -1,7 +1,0 @@
---resource
-/home/ateebx/qtapp/build/.qt/rcc/qmake_QtApp.qrc
---resource
-/home/ateebx/qtapp/build/.qt/rcc/qt_app_raw_qml_0.qrc
-/QtApp/qml/Main.qml
-/QtApp/qml/components/Menu.qml
-/QtApp/qml/components/MenuItem.qml

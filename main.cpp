@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    // QQuickStyle::setStyle("Basic"); // or whatever style you use
+    QQuickStyle::setStyle("Fusion"); // or whatever style you use
 
     QQmlApplicationEngine engine;
 
