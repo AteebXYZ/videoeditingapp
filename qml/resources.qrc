@@ -6,5 +6,6 @@
         <file>components/MediaPool.qml</file>
         <file>components/Viewer.qml</file>
         <file>components/Timeline.qml</file>
+        <file>components/Handle.qml</file>
     </qresource>
 </RCC>

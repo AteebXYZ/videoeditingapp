@@ -1,4 +1,0 @@
-C:/Users/ateeb/Downloads/videoeditingapp/build/CMakeFiles/qt_app.dir
-C:/Users/ateeb/Downloads/videoeditingapp/build/CMakeFiles/qt_app_qmlimportscan.dir
-C:/Users/ateeb/Downloads/videoeditingapp/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/ateeb/Downloads/videoeditingapp/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,9 +1,0 @@
--rootPath
-C:/Users/ateeb/Downloads/videoeditingapp
--cmake-output
--output-file
-C:/Users/ateeb/Downloads/videoeditingapp/build/.qt/qml_imports/qt_app_conf.cmake
--importPath
-C:/Users/ateeb/Downloads/videoeditingapp/build
--importPath
-C:/Qt/6.9.3/msvc2022_64/qml

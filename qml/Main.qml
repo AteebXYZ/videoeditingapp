@@ -35,10 +35,7 @@ ApplicationWindow {
 
             }
 
-            handle: Rectangle {
-                implicitHeight: 4
-                implicitWidth: 4
-                color: SplitHandle.pressed ? '#d6d6d6' : (SplitHandle.hovered ? Qt.lighter('#6a6a6a', 1.1) : "#6a6a6a")
+            handle: Handle {
             }
 
         }
@@ -47,6 +44,9 @@ ApplicationWindow {
             // anchors.fill: parent
             // anchors.margins: 10
 
+        }
+
+        handle: Handle {
         }
 
     }
