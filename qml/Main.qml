@@ -27,12 +27,16 @@ ApplicationWindow {
                 // anchors.fill: parent
                 // anchors.margins: 10
 
+                id: mediaPool
             }
 
             Viewer {
                 // anchors.fill: parent
                 // anchors.margins: 10
 
+                id: viewer
+
+                viewerSource: mediaPool.viewerSource
             }
 
             handle: Handle {

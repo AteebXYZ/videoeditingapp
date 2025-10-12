@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Widgets Quick QuickControls2)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Widgets Quick Multimedia QuickControls2)
 
 qt_add_executable(qt_app
     main.cpp
@@ -31,4 +31,5 @@ target_link_libraries(qt_app PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
     Qt6::Widgets
+    Qt6::Multimedia
 )

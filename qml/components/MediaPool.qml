@@ -6,6 +6,7 @@ Rectangle {
     id: mediaPool
 
     property color bgColor: "#333"
+    property url viewerSource: ""
 
     implicitWidth: 200
     implicitHeight: 150
@@ -30,6 +31,7 @@ Rectangle {
         nameFilters: ["Video Files (*.mp4 *.mov *.avi)", "All files (*)"]
         onAccepted: {
             console.log("Selected file:", fileDialog.selectedFile.toString());
+            mediaPool.viewerSource = fileDialog.selectedFile.toString();
         }
         onRejected: {
             console.log("File import canceled");

@@ -1,3 +1,4 @@
+import QtMultimedia
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
@@ -8,15 +9,32 @@ Rectangle {
     id: viewer
 
     property color bgColor: "#222222"
+    property url viewerSource: ""
 
     color: bgColor
 
-    Text {
-        anchors.centerIn: parent
-        text: "Viewer"
-        color: "#ccc"
-        font.pixelSize: 20
-        clip: false
+    Item {
+        anchors.fill: parent
+
+        VideoOutput {
+            id: videoOutput
+
+            anchors.fill: parent
+        }
+
+        MediaPlayer {
+            id: mediaPlayer
+
+            autoPlay: true
+            source: viewerSource
+            loops: MediaPlayer.Infinite
+            videoOutput: videoOutput
+
+            audioOutput: AudioOutput {
+            }
+
+        }
+
     }
 
 }
