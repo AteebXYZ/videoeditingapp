@@ -8,11 +8,26 @@ set(CMAKE_AUTOUIC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Widgets Quick Multimedia QuickControls2)
 
+pkg_check_modules(AVFORMAT REQUIRED libavformat)
+pkg_check_modules(AVUTIL REQUIRED libavutil)
+pkg_check_modules(AVCODEC REQUIRED libavcodec)
+pkg_check_modules(SWSCALE REQUIRED libswscale)
+
 qt_add_executable(qt_app
     main.cpp
     qml/resources.qrc
     backend.cpp
-    backend.h
+
+    # backend.h
+    MediaPoolManager.h
+    MediaPoolManager.cpp
+)
+
+target_include_directories(qt_app PRIVATE
+    ${AVFORMAT_INCLUDE_DIRS}
+    ${AVUTIL_INCLUDE_DIRS}
+    ${AVCODEC_INCLUDE_DIRS}
+    ${SWSCALE_INCLUDE_DIRS}
 )
 
 # Register the QML module (optional but recommended for clean structure)
@@ -32,4 +47,8 @@ target_link_libraries(qt_app PRIVATE
     Qt6::QuickControls2
     Qt6::Widgets
     Qt6::Multimedia
+    ${AVFORMAT_LIBRARIES}
+    ${AVUTIL_LIBRARIES}
+    ${AVCODEC_LIBRARIES}
+    ${SWSCALE_LIBRARIES}
 )

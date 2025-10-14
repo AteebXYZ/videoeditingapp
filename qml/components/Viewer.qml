@@ -11,6 +11,8 @@ Rectangle {
     property color bgColor: "#222222"
     property url viewerSource: ""
 
+    SplitView.minimumWidth: 100
+    SplitView.minimumHeight: 100
     color: bgColor
 
     Item {

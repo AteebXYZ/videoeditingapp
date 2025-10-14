@@ -1,57 +1,75 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Dialogs // <-- for FileDialog
+import QtQuick.Dialogs
 
 Rectangle {
     id: mediaPool
 
-    property color bgColor: "#333"
-    property url viewerSource: ""
-
-    implicitWidth: 200
-    implicitHeight: 150
     SplitView.minimumWidth: 100
     SplitView.minimumHeight: 100
-    color: bgColor
+    implicitWidth: 500
+    color: "#333"
+    Component.onCompleted: {
+        MediaPoolManager.load();
+    }
 
     GridView {
+        id: gridView
+
+        // interactive: false
         anchors.fill: parent
         anchors.margins: 10
-        cellWidth: 110
-        cellHeight: 70
-        // spacing: 10
-        model: 10
-        clip: true
+        cellWidth: 150
+        cellHeight: 100
+        // clip: true
+        model: MediaPoolManager.clips
 
         delegate: Rectangle {
-            width: 100
-            height: 60
+            width: gridView.cellWidth - 4 // leave 2px margin each side
+            height: gridView.cellHeight - 4
             color: "#555"
+            radius: 4
 
-            Text {
-                anchors.centerIn: parent
-                color: "white"
-                text: "Clip " + (index + 1)
+            Column {
+                anchors.fill: parent
+                anchors.margins: 2
+                spacing: 2
+
+                Image {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    source: modelData["thumbnail"]
+                    width: parent.width
+                    height: parent.height - 20
+                    fillMode: Image.PreserveAspectCrop
+                }
+
+                Text {
+                    text: modelData["name"]
+                    color: "white"
+                    font.pixelSize: 12
+                    elide: Text.ElideRight
+                    horizontalAlignment: Text.AlignHCenter
+                    width: parent.width
+                }
+
             }
 
         }
 
     }
 
-    // --- FileDialog for importing clips ---
     FileDialog {
-        // TODO: process the file here (load, copy, etc.)
-
         id: fileDialog
 
         title: "Import clip"
-        nameFilters: ["Video Files (*.mp4 *.mov *.avi)", "All files (*)"]
+        nameFilters: ["Video Files (*.mp4 *.mov *.avi *.mkv)", "All files (*)"]
+        fileMode: FileDialog.OpenFiles
+        options: FileDialog.DontUseNativeDialog
         onAccepted: {
-            console.log("Selected file:", fileDialog.selectedFile.toString());
-            mediaPool.viewerSource = fileDialog.selectedFile.toString();
-        }
-        onRejected: {
-            console.log("File import canceled");
+            let fileUrl = fileDialog.selectedFile.toString();
+            let fileName = fileUrl.split("/").pop();
+            MediaPoolManager.addClip(fileName, fileUrl);
+            MediaPoolManager.save();
         }
     }
 
@@ -60,7 +78,7 @@ Rectangle {
 
         MenuItem {
             text: "Import clip"
-            onTriggered: fileDialog.open() // <-- open native FileDialog
+            onTriggered: fileDialog.open()
         }
 
     }
@@ -73,6 +91,14 @@ Rectangle {
                 contextMenu.popup();
 
         }
+    }
+
+    Connections {
+        function onClipsChanged() {
+            gridView.model = MediaPoolManager.clips;
+        }
+
+        target: MediaPoolManager
     }
 
 }

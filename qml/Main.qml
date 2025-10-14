@@ -1,58 +1,52 @@
 // import QtApp 1.0
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import "components"
 
 ApplicationWindow {
+    // SplitView {
+    //     id: splitView
+    //     orientation: Qt.Vertical
+    //     anchors.fill: parent
+    //     implicitHeight: 0
+    //     SplitView {
+    //         SplitView.minimumHeight: 100
+    //         SplitView.minimumWidth: 100
+    //         orientation: Qt.Horizontal
+    //         MediaPool {
+    //             // anchors.fill: parent
+    //             // anchors.margins: 10
+    //             id: mediaPool
+    //         }
+    //         Viewer {
+    //             // anchors.fill: parent
+    //             // anchors.margins: 10
+    //             id: viewer
+    //             viewerSource: mediaPool.viewerSource
+    //         }
+    //         handle: Handle {
+    //         }
+    //     }
+    //     Timeline {
+    //         // anchors.fill: parent
+    //         // anchors.margins: 10
+    //     }
+    //     handle: Handle {
+    //     }
+    // }
+
+    id: appWindow
+
     property bool menuAnimationsEnabled: true
 
     visible: true
-    width: 800
-    height: 600
-    title: "Qt6 App with Soft Shadow Menus"
+    width: 1000
+    height: 700
+    title: "Advanced QML Tiling Window Manager"
 
-    SplitView {
-        id: splitView
-
-        orientation: Qt.Vertical
-        anchors.fill: parent
-        implicitHeight: 600
-
-        SplitView {
-            SplitView.minimumHeight: 100
-            orientation: Qt.Horizontal
-
-            MediaPool {
-                // anchors.fill: parent
-                // anchors.margins: 10
-
-                id: mediaPool
-            }
-
-            Viewer {
-                // anchors.fill: parent
-                // anchors.margins: 10
-
-                id: viewer
-
-                viewerSource: mediaPool.viewerSource
-            }
-
-            handle: Handle {
-            }
-
-        }
-
-        Timeline {
-            // anchors.fill: parent
-            // anchors.margins: 10
-
-        }
-
-        handle: Handle {
-        }
-
+    DockArea {
     }
 
     menuBar: MenuBar {
